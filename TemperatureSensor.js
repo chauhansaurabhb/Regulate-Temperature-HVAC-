@@ -9,7 +9,7 @@ var sensor = {
         var readout = sensorLib.read();
        var value={"tempValue":readout.temperature.toFixed(2),"unitOfMeasurement":"C"}; 
        	client.publish('tempMeasurement',JSON.stringify(value));  
-	console.log('Current temperature is: ' + readout.temperature.toFixed(2) + 'C'); 
+	console.log('Current temperature of Simulation lab is: ' + readout.temperature.toFixed(2) + 'C'); 
         setTimeout(function () {
             sensor.read();
         }, 5000);
